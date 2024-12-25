@@ -25,5 +25,6 @@
 #ruledef {
     ld {rd: register}, {src: ld_source} => src @ rd @ 0x1
     st mem[{address}], {src: st_source} => src @ address`6 @ 0x2
+    add {rd: register}, {immediate} => immediate`10 @ rd @ 0x4
 }
 
