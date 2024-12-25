@@ -12,12 +12,18 @@
     r3   => 3`2
 }
 
-#subruledef source {
+#subruledef ld_source {
     {immediate} => immediate`9 @ 0b0
     mem[{address}] => 0b000 @ address`6 @ 0b1
 }
 
+#subruledef st_source {
+    {immediate} => immediate`5 @ 0b0
+    {rs: register} => 0b000 @ rs @ 0b1
+}
+
 #ruledef {
-    ld {rd: register}, {src: source} => src @ rd @ 0x1
+    ld {rd: register}, {src: ld_source} => src @ rd @ 0x1
+    st mem[{address}], {src: st_source} => src @ address`6 @ 0x2
 }
 
