@@ -26,6 +26,10 @@
     ld {rd: register}, {src: ld_source} => src @ rd @ 0x1
     st mem[{address}], {src: st_source} => src @ address`6 @ 0x2
     add {rd: register}, {immediate} => immediate`10 @ rd @ 0x4
-    addr {rd: register}, {rs: register} => rs @ rd @ 0x5
+    addr {rd: register}, {rs: register} => 0x00 @ rs @ rd @ 0x5
+    sub {rd: register}, {immediate} => immediate`10 @ rd @ 0x6
+    subr {rd: register}, {rs: register} => 0x00 @ rs @ rd @ 0x7
+    mul {rd: register}, {immediate} => 0b00 @ immediate`8 @ rd @ 0x6
+    mulr {rd: register}, {rs: register} => 0x00 @ rs @ rd @ 0x7
 }
 
