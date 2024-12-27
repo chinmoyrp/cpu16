@@ -11,10 +11,9 @@ An attempt at creating a 16-bit CPU
 ## ISA
 - System Ops 
     - NOP:  0x0
-    - HALT: 0x1
 - Data Ops
-    - LD:   0x2
-    - ST:   0x3
+    - LD:   0x1
+    - ST:   0x2
 - ALU Ops
     - ADD:  0x4
     - ADDR: 0x5
@@ -23,9 +22,10 @@ An attempt at creating a 16-bit CPU
     - MUL:  0x8
     - MULR: 0x9
 - Jumps Ops
-    - JMP:  0x9
-    - JEQ:  0xA
-    - JLT:  0xB
-    - JGT:  0xC
+    - JMP:  0xA
+    - JEQ:  0xB
+    - JLT:  0xC
+    - JGT:  0xD
 - Misc
-    - INC:  0xD
+    - MOV:  0x3
+    - CMP:  0xE
