@@ -29,8 +29,12 @@
     addr {rd: register}, {rs: register} => 0`8 @ rs @ rd @ 0x5
     sub {rd: register}, {immediate} => immediate`10 @ rd @ 0x6
     subr {rd: register}, {rs: register} => 0`8 @ rs @ rd @ 0x7
-    mul {rd: register}, {immediate} => 0b00 @ immediate`8 @ rd @ 0x8
+    mul {rd: register}, {immediate} => 0`2 @ immediate`8 @ rd @ 0x8
     mulr {rd: register}, {rs: register} => 0`8 @ rs @ rd @ 0x9
     jmp {address} => 0`6 @ address`6 @ 0xA
+    jeq {address} => 0`6 @ address`6 @ 0xB
+    jlt {address} => 0`6 @ address`6 @ 0xC
+    jgt {address} => 0`6 @ address`6 @ 0xD
+    cmp {a: register}, {immediate} => immediate`10 @ a @ 0xE
+    halt => 0xF`16
 }
-
