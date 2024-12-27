@@ -204,7 +204,7 @@
       <elementAttributes>
         <entry>
           <string>Label</string>
-          <string>INC</string>
+          <string>MOV</string>
         </entry>
         <entry>
           <string>Bits</string>
@@ -572,7 +572,7 @@
         </entry>
         <entry>
           <string>NetName</string>
-          <string>INC</string>
+          <string>MOV</string>
         </entry>
       </elementAttributes>
       <pos x="1580" y="340"/>
@@ -612,7 +612,7 @@
       <elementAttributes>
         <entry>
           <string>NetName</string>
-          <string>INC</string>
+          <string>MOV</string>
         </entry>
       </elementAttributes>
       <pos x="540" y="300"/>
