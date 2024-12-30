@@ -29,3 +29,8 @@ An attempt at creating a 16-bit CPU
 - Misc
     - MOV:  0x3
     - CMP:  0xE
+
+Installation:
+2. Install Java
+1. Open `frontpanel.dig` in Digital: [https://github.com/hneemann/Digital]
+    Download link: [https://github.com/hneemann/Digital/releases/latest/download/Digital.zip]
